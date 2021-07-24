@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#test {
+			position: absolute;
+			top: 40%;
+			left: 40%;
+			width: 10px;
+			height: 10px;
+			padding: 20px;
+			color: #fff;
+			font-size: 16px;
+			border: 5px solid orange;
+			background-color: blueviolet;
+			box-sizing: border-box;
+			transition: all 1s ease;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			var box = $("#test");
+			var deg = 180;
+			
+			$("#btn").click(function(){
+				box.css({
+					"transform": "rotate(" + deg + "deg)"
+				});
+			});			
+		});
+	</script>
+</head>
+<body>
+	<button type="button" id="btn">Rotate</button>
+	<div id="test">box</div>
+</body>
+</html>

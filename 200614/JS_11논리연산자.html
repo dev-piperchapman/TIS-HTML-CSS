@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script - 논리연산자</title>
+</head>
+<body>
+	<div id="test"></div>
+	<script>
+		var x = 7;
+//		x == 8;
+		
+		document.getElementById("test").innerHTML
+			= ( x == 7 ) + "<br>" + 
+				( x == 8 ) + "<br>" + 
+				( x == "7" ) + "<br>" + //데이터타입 비교 X 
+				( x === "7" ) + "<br>" + //데이터타입 비교 O
+				( x !== "7" );
+		
+	</script>
+</body>
+</html>

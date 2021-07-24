@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script 5</title>
+</head>
+<body>
+	<!-- 
+		1. 변수명은 문자 / 숫자 / _ / $ 사용가능
+		2. 변수명은 반드시 문자로 시작해야 함
+		3. $로 시작 가능 but! jquery 문법과 중복 가능성 유 ... 지양
+		4. 변수명은 대소문자 구분함
+		5. 자바스크립트에 이미 등록된 키워드는 사용 불가
+	-->
+	
+	<p id="test"></p>
+	
+	<script>
+		var	name = "John";
+		var age = 32;
+		var hobby = "swimming";
+		
+		document.getElementById("test").innerHTML
+			= "My name is " + name + ",<br>" + age + "<br>" + hobby;
+	</script>
+	
+</body>
+</html>

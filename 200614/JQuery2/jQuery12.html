@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#test {
+
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#test").prepend("<strong> 추가하는 내용 </strong>");
+				//태그 앞부분에 추가
+			});
+			$("#btn2").click(function(){
+				$("ol").prepend("<li>추가 리스트</li>");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="test">안녕하세요?</p>
+	<ol>
+		<li>기본 리스트</li>
+	</ol>
+	<button id="btn1">본문추가</button>
+	<button id="btn2">리스트추가</button>
+</body>
+</html>

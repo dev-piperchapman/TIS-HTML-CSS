@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Layout</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			line-height: 1.5;
+			letter-spacing: -0.08em;
+		}
+		h1 { 
+			color: saddlebrown;
+			font-size: 50px;
+		}
+		p {
+			font-style: italic;
+			text-align: right;
+		}
+		p b {
+			font-size: 34px;
+			font-style: normal;
+			text-decoration: line-through;
+		}
+		
+		dl > dd {
+			color: mediumblue;
+			font-size: 20px;
+			text-decoration: underline;
+		}
+		
+		#test {
+			color: brown;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.skyblue {
+			color: skyblue;
+			text-align: center;
+		}
+		
+		/* !important : 0순위 */
+		/* 인라인, 태크에 직접 작성 > #id > .class > 태그명 */
+		
+	</style>
+</head>
+<body>
+	<h1>세계 3대 미향</h1>
+	<img src="images/rio.png" alt="리우데자네이루 브라질 사진">
+	<p>리우데자네이루 <b>브라질</b></p>
+	<p class="skyblue">나폴리 이탈리아</p>
+	<dl>
+		<dt id="test">슈퍼푸드</dt>
+		<dd>블루베리</dd>
+		<dd>토마토</dd>
+		<dd>아보카도</dd>
+	</dl>
+</body>
+</html>

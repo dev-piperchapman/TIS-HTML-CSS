@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			height: 200vh;
+			margin: 0;
+			background-image: url(images/bg1.png);
+			background-repeat: no-repeat;
+/*			background-position: center;*/
+/*			background-size: cover;*/
+			background-attachment: fixed;
+		}
+		
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+		header, .contents-wrapper, section, aside, footer, div {
+			border: 10px solid navy;
+			padding: 10px;
+		}
+		
+		header, .contents-wrapper, footer {
+			margin: 0 auto;
+		}
+		
+		
+		header {
+			width: 800px;
+			margin-bottom: 10px;
+		}
+		
+		aside {
+			border-color: blueviolet;
+		}
+		aside img {
+			width: 100%;
+		}
+		
+		.clear::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		
+		.contents-wrapper {
+			position: relative;
+			width: 800px;
+			margin-bottom: 10px;
+		}
+		
+		/*
+		.contents-wrapper::before {
+			content: "앞부분 내용 추가";
+			display: block;
+			clear: both;
+			width: 100%;
+			height: 100px;
+			background-color: chocolate;			
+		}
+		*/
+		
+		.contents-wrapper section {
+			width: 400px;
+			height: 500px;
+			float: left;
+			border-color: cornflowerblue;
+		}
+		
+		.contents-wrapper aside {
+			width: 200px;
+			height: 500px;
+			float: right;
+			border-color: mediumpurple;
+		}
+		
+		footer {
+			width: 800px;
+			height: 100px;
+		}
+		
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+		
+		.nav {
+			width: 550px;
+			margin: 0 auto;
+		}
+		
+		li {
+			display: inline-block;
+			padding: 10px 10px;
+		}
+		
+		a {
+			font-size: 20px;
+			font-weight: 600;
+			color: lightsalmon;
+			text-decoration: none;
+		}
+		
+		li:hover {
+		}
+		
+		li:hover a {
+			color: blueviolet;
+			border-bottom: 2px dotted blueviolet;
+		}
+		
+		.notice-area {
+			position: absolute;
+			top: 0;
+			right: -160px;
+			width: 100px;
+			height: 200px;
+			border-color: tomato;
+		}
+		
+		.afb-top {
+			z-index: 10;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			padding: 20px;
+			font-size: 20px;
+			color: tomato;
+			text-transform: uppercase;
+			background-color: firebrick;
+			border-radius: 6px;
+		}
+		
+	</style>
+</head>
+<body>
+	<a class="afb-top" href="#">top</a>
+	<header>
+		<ul class="nav">
+			<li><a href="">Menu 01</a></li>
+			<li><a href="">Menu 02</a></li>
+			<li><a href="">Menu 03</a></li>
+			<li><a href="">Menu 04</a></li>
+			<li><a href="">Menu 05</a></li>
+		</ul>		
+	</header>
+	<div class="contents-wrapper clear">
+		<!-- 가상클래스 위치 : 상단	-->
+		<section>
+			<h2>본문</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat et nemo aliquam enim, quo maxime deleniti corrupti doloremque repellat asperiores tenetur cupiditate incidunt voluptas libero, accusantium neque earum, laborum vitae.
+			</p>
+		</section>
+		<aside>
+			<h2>배너</h2>
+			<img src="images/sydney.png" alt="">
+		</aside>
+		<div class="notice-area">
+			<h2>공지사항</h2>
+		</div>
+		<!-- 가상클래스 위치 : 하단	-->
+	</div>
+	<footer>하단</footer>
+</body>
+</html>

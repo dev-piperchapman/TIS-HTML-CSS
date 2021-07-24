@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="utf-8">
+		<title>웹사이트 레이아웃</title>
+		<style>
+			/ * 폰트관련 속성은 상속됨. 배경색은 상속되지 않음 * / 
+			/* * { color: deeppink; } 
+			header { color: blue !important; } 
+			*/
+			
+			body { margin: 0; }
+
+			header { color: red; } 
+			#header { color: skyblue; }
+			.header-box { color: green; }
+			/* 우선순위 높은 순  id > class > tag */
+			
+			body #header { color: deeppink; }
+			/* id > class > tag */
+			
+			#contents section { background: red; }			
+
+			header, div, footer { 
+				border: 1px solid red;
+				margin: 10px;
+				width: 800px;
+			}
+			section, aside, span {
+				border : 1px solid blue;
+				margin : 10px;
+				width: 500px;
+			}
+			#contents { font-size: 30px; }
+			.footer { font-size: 10px; }
+		</style>
+	</head>
+	<body>
+		<header id="header" class="header-box">header
+			<nav>nav</nav>
+		</header>
+		<div id="contents">
+			<section>section</section>
+			<aside>aside</aside>
+		</div>
+		<section>section</section>
+		<footer class="footer">footer</footer>
+	</body>
+</html>

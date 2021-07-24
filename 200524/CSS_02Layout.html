@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Layout 02</title>
+	<style>
+		/*
+		margin은 수직방향으로는 겹친다.
+		둘 중 큰 값으로 적용된다.
+		
+		단, float 적용시 예외가 되어, 겹쳐지지 않음.
+		
+		수평 Layout 방법
+		1. float: left
+		2. display: inline;
+				단, block 속성을 잃어버림. 그래서 3번으로..
+		3. display: inline-block;
+				
+		
+		*/
+		
+		body {
+			margin: 0;
+		}
+		.box {
+			width: 150px;
+			height: 150px;
+			/* float: left; */
+			/* display: inline; */
+			/* display: inline-block; */
+			border: 8px solid #222;
+			/* border-width / border-style / border-color */
+		}
+		.box01 {
+			/* padding: 100px; */
+			background-color: lightblue;
+			border-width: 100px;
+		}
+		.box02 {
+			padding: 100px;
+			background-color: tan;
+		}
+		.box03 {
+			padding: 50px;
+			background-color: khaki;
+		}
+	</style>
+</head>
+<body>
+	<div class="box box01">box 01</div>
+	<div class="box box02">box 02</div>
+	<div class="box box03">box 03</div>
+</body>
+</html>

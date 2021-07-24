@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation - Keyframe</title>
+	<style>
+		.box {
+			position: absolute;
+			left: 100px;
+			top: 50%;
+			width: 150px;
+			height: 150px;
+			color: #fff;
+			font-size: 40px;
+			line-height: 150px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: cadetblue;
+			box-shadow: 5px 5px 12px rgba(0, 0, 0, .4);
+			
+			animation-name: move;
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+		}
+		
+		
+		
+		@keyframes move {
+			from {
+				left: 100px;
+				transform: rotate( 0deg );
+			}
+			to {
+				left: 800px;
+				transform: rotate( 360deg );
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">BOX</div>
+</body>
+</html>

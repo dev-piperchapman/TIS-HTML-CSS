@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.clear:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		
+		body {
+			margin: 0;
+			line-height: 1.5;
+			letter-spacing: -0.05em;
+			background-color: #333;
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+		ul {
+			list-style: none;
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+		
+		img {
+			vertical-align: top;
+		}
+		
+		h1 {
+			text-transform: uppercase;
+		}
+		
+		li {
+			display: inline-block;
+		}
+		 
+		header {
+			position: relative;
+			height: 180px;
+			margin-bottom: 20px;
+		}		
+		
+		.title-area {
+			padding-top: 80px;
+		}
+		
+		span {
+			margin-bottom: 60px;
+		}
+		
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+		
+		.wrapper {
+			width: 800px;
+			height: 300vh;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+		}
+		
+		.top-menu, .main-menu {
+			position: absolute;
+			font-size: 0;
+		}
+		
+		.top-menu {
+			top: 0;
+			right: 0;
+		}
+		
+		.main-menu {
+			bottom: 0;
+			right: 0;
+		}
+		
+		.top-menu a, .main-menu a {
+			display: inline-block;
+			padding: 5px 10px;
+			font-size: 16px;
+			border: 1px solid #333;
+			border-right: none;
+		}
+		
+		.top-menu li:last-child a,
+		.main-menu li:last-child a {
+			border-right: 1px solid #333;
+		}
+		
+		.article-section {
+			float: left;
+			width: 520px;
+		}
+		
+		article {
+			padding: 20px;
+			border: 1px solid #333;
+			margin-bottom: 20px;
+		}
+		
+		aside {
+			float: right;
+			width: 220px;
+			border: 1px solid #333;
+		}
+		
+		aside input {
+			display: none
+		}
+		aside section {
+			font-size: 0;
+		}
+
+		aside section label {
+			display: inline-block;
+			width: 50%;
+			height: 40px;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			line-height: 40px;
+			background-color: #333;
+		}
+		
+		aside input:nth-of-type(1) ~ div:nth-of-type(1) {
+			display: none;
+		}
+		aside input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+			display: block;
+		}
+		aside input:nth-of-type(2) ~ div:nth-of-type(2) {
+			display: none;
+		}
+		aside input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+			display: block;
+		}
+		
+		aside input:nth-of-type(1):checked ~ section label:nth-of-type(1) {
+			color: #333;
+			background-color: #fff;
+		}
+		aside input:nth-of-type(2):checked ~ section label:nth-of-type(2) {
+			color: #333;
+			background-color: #fff;
+		}
+		
+		aside .tab-item li {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		
+		aside .tab-item a {
+			display: inline-block;
+			width: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #333;
+		}
+		aside .tab-item a:last-child {
+			border-bottom: none;				
+		}
+		
+		aside .tab-item a .text-area {
+			float: right;
+			width: 120px;
+			margin-top: 6px;
+			margin-left: 10px;
+		}
+/*
+		.tab-menu li {
+			width: 100%;
+			
+		}
+		
+		.tab-menu a {
+			display: inline-block;
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid #333;
+		}
+*/	
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		
+		footer {
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			border: 1px solid #333;
+		}		
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<ul class="top-menu">
+				<li><a href="">Web</a></li>
+				<li><a href="">Mobile</a></li>
+				<li><a href="">Game</a></li>
+				<li><a href="">Simulation</a></li>
+				<li><a href="">Data</a></li>
+			</ul>
+			<div class="title-area">
+				<h1>html / css / javascript / jquery</h1>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			</div>
+			<nav>
+				<ul class="main-menu">
+					<li><a href="">HTML2</a></li>
+					<li><a href="">CSS2</a></li>
+					<li><a href="">JavaScript</a></li>
+					<li><a href="">jQuery</a></li>
+					<li><a href="">Node.js</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="contents-wrapper clear">
+			<section class="article-section">
+				<article>
+					<h3>Main Article</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, fugit totam dolorem, neque ratione, voluptatibus explicabo ea quibusdam dicta excepturi aspernatur ipsum maxime tenetur doloremque a eveniet repudiandae architecto voluptate!
+					</p>
+				</article>
+				<article>
+					<h3>Main Article</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, fugit totam dolorem, neque ratione, voluptatibus explicabo ea quibusdam dicta excepturi aspernatur ipsum maxime tenetur doloremque a eveniet repudiandae architecto voluptate!
+					</p>
+				</article>
+				<article>
+					<h3>Main Article</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, fugit totam dolorem, neque ratione, voluptatibus explicabo ea quibusdam dicta excepturi aspernatur ipsum maxime tenetur doloremque a eveniet repudiandae architecto voluptate!
+					</p>
+				</article>
+			</section>
+			<aside>
+<!--
+				<ul class="tab-menu">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+-->
+				<input type="radio" id="first" name="tab" checked>
+				<input type="radio" id="second" name="tab">
+				<section class="tab-menu-input">
+					<label for="first">첫번째 메뉴</label>
+					<label for="second">두번째 메뉴</label>
+				</section>
+				<div class="tab-item">
+					<ul>
+						<li>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+						</li>
+					</ul>				
+				</div>
+				<div class="tab-item">
+					<ul>
+						<li>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+							<a href="">
+								<img src="https://placehold.it/60x60" alt="">
+								<div class="text-area">
+									<span class="title">HTML5 Canvas</span>
+									<span class="date">2012-03-01</span>
+								</div>
+							</a>
+						</li>
+					</ul>				
+				</div>
+			</aside>
+		</div>
+		<footer>
+			<p>Copyright</p>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

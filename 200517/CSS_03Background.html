@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Background</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		#bg {
+			height: 100vh;
+			border: 20px dotted brown;
+			background-image: url(images/bg2.jpg);
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			background-origin: padding-box;
+			background-attachment: fixed;
+		}
+		#bg-gradient-l {
+			width: 500px;
+			height: 300px;
+			background: linear-gradient(to right, blue, deeppink);
+		}
+		#bg-gradient-r {
+			width: 500px;
+			height: 300px;
+			background: radial-gradient(circle, blue, deeppink, tan);
+			
+		}
+		.grid-column {
+			width: 100%;
+			height: 100vh;
+			background-image: repeating-linear-gradient(to right, yellow 0%, yellow 20%, green 20%, green 80%);			
+		}
+	</style>
+</head>
+<body>
+	<div id="bg">
+		<h1>Chocolete</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fuga ea possimus impedit. Ullam atque neque nostrum earum nemo consequuntur accusantium quisquam totam, praesentium laborum beatae, sed, quos in, magni.</p>
+	</div>
+	<div id="bg-gradient-l"></div>
+	<div id="bg-gradient-r"></div>
+	<div class="grid-column"></div>
+</body>
+</html>

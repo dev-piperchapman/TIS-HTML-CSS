@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Animation BG Effect</title>
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+			background: url(images/bg.jpg) no-repeat fixed center / cover;
+		}
+		
+		h2 {
+			margin-top: 0;
+			margin-bottom: 0;
+			text-align: center;
+			color: #fff;
+		}
+		
+		
+		.background {
+			width: 100%;
+			height: 100%;
+			background-image: url(images/bg01.png), url(images/bg02.png);
+			animation: rain-snow;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+		}
+		
+		@keyframes rain-snow {
+			from {
+				background-position: 0 0, 0 0;
+			}
+			to {
+				background-position: 0 1200px, 0 300px;
+			}
+		}
+		
+		.monster {
+			width: 74px;
+			height: 93px;
+			margin: 100px auto;
+			overflow: hidden;
+			background: url(images/monster.png) left center;
+			animation: monster-move;
+			animation-duration: .8s;
+			animation-iteration-count: infinite;
+			animation-timing-function: steps(10);
+		}
+		
+		@keyframes monster-move {
+			0% {
+				background-position: 0 center;	
+			}
+			
+			100% {
+				background-position: -740px center;
+			}
+			
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<div class="background">
+		<h2>눈 내리는 풍경</h2>
+		<div class="monster"></div>
+
+	</div>
+</body>
+</html>

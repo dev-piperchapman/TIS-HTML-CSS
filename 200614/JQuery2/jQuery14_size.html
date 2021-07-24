@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box {
+			width: 300px;
+			height: 100px;
+			margin: 20px;
+			padding: 10px;
+			background-color: blanchedalmond;
+			border: 2px solid orange;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				// var box = $("#box").width();
+				// $("h1").text(box);
+				var width = $("#box").width();
+				var padding = parseInt($("#box").css("padding"));
+				//parseInt() 문장을 정수로 변환
+				//String() 숫자를 문자로 변환
+				var border = parseInt($("#box").css("border-width"));
+				var wholeWidth = width + ( padding * 2 ) + ( border * 2 );
+				$("#box").text("width + ( padding * 2 ) + ( border * 2 ) = " + wholeWidth);
+				console.log( width, padding, border );
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>전체 박스 사이즈 출력 / 컨텐츠 + 내부 padding + border</h1>
+	<div id="box"></div>
+	<button id="btn">클릭</button>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		
+		* {
+			margin: 0;
+			box-sizing: border-box;
+			letter-spacing: -0.025em;
+		}
+		
+		body {
+			background-color: #fafafc;
+		}
+		
+		img, button { vertical-align: top; }
+		
+		a { text-decoration: none; }
+		
+		li { list-style: none; }
+		
+		ul {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+			
+		.clear::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		
+		
+		/*	HEADER - TOP MENU	*/
+		.header-top {
+			height: 40px;
+			background-color: blueviolet;
+		}
+		
+		.header-top ul {
+			float: left;
+			padding-top: 10px;
+			padding-left: 40px;
+			font-size: 0px;
+		}
+		.header-top li {
+			font-size: 16px;
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.header-top li a { color: #fff; }
+		
+		.header-top .link {
+			float: right;
+			padding-top: 10px;
+			margin-right: 40px;
+			color: #fff;
+		}		
+		
+		/*	HEADER - PERSONAL AREA	*/
+		.header-search {
+			width: 960px;
+			margin: 20px auto;
+		}
+		.header-search > * {
+			float: left;
+			font-size: 0px;
+		}
+		.header-search .user-menu {
+			float: right;
+		}
+		.header-search li {
+			font-size: 16px;
+			display: inline-block;
+		}
+		
+		.search-area {
+			margin-top: 10px;
+			margin-left: 30px;
+		}
+		
+		.search-input-area {
+			width: 400px;
+			height: 40px;
+			margin-right: 10px;
+			padding: 10px;
+			font-size: 20px;
+			background-color: #e9e9e9;
+			border: none;
+			border-bottom: 2px solid #a9a9a9;
+		}	
+		
+		input.search-input-area:focus {
+			outline: none;
+		}
+		
+		.search-input-area:focus {
+			border-bottom: 2px solid #8a2be2;
+			
+		}
+		
+		.btn-search {
+			width: 140px;
+			height: 40px;
+			color: blueviolet;
+			font-size: 14px;
+			font-weight: 800;
+			text-transform: uppercase;
+			background-color: rgba(138, 43, 226, .2);
+			border: 1px solid #8a2be2;
+		}
+		.btn-search:hover {
+			color: #fff;
+			background-color: rgba(138, 43, 226, 1);
+		}
+		
+		.user-menu {
+			margin-top: 20px;
+		}
+		.user-menu li {
+			margin-right: 20px;
+		}
+		.user-menu li:last-child {
+			margin-right: 0;
+		} 
+		.user-menu a {
+			font-size: 15px;
+			font-weight: 600;
+			color: blueviolet;
+			text-transform: uppercase;
+		}
+		.user-menu li:hover a {
+			text-decoration: underline;
+		}
+		
+		
+		/*	WRAPPER	*/
+		.contents-wrapper {
+			width: 960px;
+			margin: 0 auto;
+		}
+		.contents-wrapper > * {
+			float: left;
+		}
+		
+		
+		/*	WRAPPER	- LEFT MENU */		
+		.left-menu {
+			margin-right: 20px;
+		}
+		
+		.left-menu li {
+			width: 175px;
+		}
+		
+		.left-menu li a {
+			width: 100%;
+			display: inline-block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 20px;			
+		}
+		
+		.left-menu li:hover a {
+			background-color: rgba(138, 43, 226, .2);			
+		}
+		.left-menu li:hover a::after {
+			content: " >";
+		}
+		
+		
+		/*	WRAPPER	- MAIN CONTENTS */		
+		.main-contents{
+			width: 550px;
+		}
+		
+		.main-contents .box {
+			width: 100%;
+			height: 200px;
+			margin-bottom: 20px;
+			background-color: #e9e9e9;
+		}
+		
+		.main-contents .middle-menu {
+			height: 40px;
+			margin-bottom: 20px;
+			font-size: 0;
+			line-height: 40px;
+			text-align: center;
+			background-color: #8a2be2;
+		}
+	
+		.main-contents .middle-menu li {
+			display: inline-block;
+			margin-right: 25px;
+			font-size: 16px;
+		}
+		.main-contents .middle-menu li:last-child {
+			margin-right: 0;
+		}
+		.main-contents .middle-menu a {
+			color: #fff;
+		}
+		
+		/*	WRAPPER	- BANNER */
+		
+		.banner {
+			float: right;
+			width: 195px;
+		}
+		
+		.banner .box  {
+			width: 100%;
+			height: 90px;
+			margin-bottom: 20px;
+			background-color: #e9e9e9;
+			
+		}
+		.banner .box:nth-child(5)  {
+			height: 150px;
+		}
+		
+		
+		/* FOOTER	*/
+		footer {
+			height: 200px;
+			background-color: #d9d9d9;
+		}
+	
+		
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-top clear">
+			<ul>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+				<li><a href="">menu</a></li>
+			</ul>
+			<a class="link" href="">link >></a>
+		</div>
+		<div class="header-search clear">
+			<h1>
+				<a href="" class="logo">
+					<img src="images/yahoo_logo.png" alt="Yahoo">
+				</a>				
+			</h1>
+			<div class="search-area">
+				<input class="search-input-area" type="search">
+				<button class="button btn-search" type="submit">search web</button>
+			</div>
+			<ul class="user-menu">
+				<li><a href="">my page</a></li>
+				<li><a href="">sign</a></li>
+				<li><a href="">e-mail</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="contents-wrapper clear">
+		<section class="left-menu">
+			<ul>
+				<li><a href="">Mail</a></li>
+				<li><a href="">News</a></li>
+				<li><a href="">Sports</a></li>
+				<li><a href="">Finance</a></li>
+				<li><a href="">Weather</a></li>
+				<li><a href="">Autos</a></li>
+				<li><a href="">Screen</a></li>
+				<li><a href="">Dating</a></li>
+				<li><a href="">Shopping</a></li>
+				<li><a href="">Makers</a></li>
+				<li><a href="">Parenting</a></li>
+				<li><a href="">Health</a></li>
+				<li><a href="">Style</a></li>
+				<li><a href="">Beauty</a></li>
+				<li><a href="">Politice</a></li>
+				<li><a href="">Movies</a></li>
+				<li><a href="">Travel</a></li>
+				<li><a href="">Tech</a></li>
+				<li><a href="">TV</a></li>
+			</ul>
+		</section>
+		<section class="main-contents clear">
+			<div class="box"></div>
+			<div class="box"></div>
+			<ul class="middle-menu">
+				<li><a href="">All</a></li>
+				<li><a href="">Stories</a></li>
+				<li><a href="">News</a></li>
+				<li><a href="">Entertainment</a></li>
+				<li><a href="">Sports</a></li>
+				<li><a href="">Business</a></li>
+			</ul>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</section>
+		<aside class="banner">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</aside>
+	</div>
+	<footer></footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; }
+		li { list-style: none; }
+		.ancestor *  {
+			margin: 15px;
+			padding: 5px;
+			color: #ddd;
+			border: 2px solid #ddd;
+		}
+		.on {
+			border: 2px solid royalblue;
+			color: royalblue;
+		}
+	</style>
+	<script>
+		// parent / parents / children / find / :first / :last
+		// siblings 형제요소 선택시 자기자신은 선택제외
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$("ul").siblings("*:first").addClass("on");
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="ancestor">
+		<div class="">div
+			<ul>ul
+				<li>li - 1
+					<span class="first">span01</span>
+					<span class="">span02</span>
+					<span class="test">span03</span>
+					<span class="test">span04</span>
+				</li>
+				<li>li - 2
+					<span> li - 2 - span </span>
+				</li>
+				<li>li - 3
+					<p> li - 3 - p </p>
+				</li>
+				<li>li - 4
+					<p class="test"> li - 4 - p </p>
+				</li>
+			</ul>
+			<p>p - 1</p>
+			<p>p - 2</p>
+		</div>
+	</div>
+	<button type="button" id="btn">선택</button>
+</body>
+</html>

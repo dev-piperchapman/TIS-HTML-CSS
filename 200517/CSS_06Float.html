@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Float / Layout</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		#wrapper, header, section, aside, footer, .contents {
+			border: 5px solid #333;
+			margin: 10px;
+		}
+		.contents {
+			background-color: aqua;
+			overflow: hidden;
+		}
+		section {
+			float: left;
+			background-color: coral;
+		}
+		aside {
+			float: right;
+			background-color: cadetblue;
+		}
+		footer { 
+			background-color: bisque;
+			clear: both;
+		}
+		.box-wrap {
+			height: 200vh;
+			margin: 10px;
+			position: relative;
+			border: 5px solid #111;
+		}
+		.box {
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			position: absolute;
+			border: 5px solid #111;
+		}
+		.box01 { 
+			top: 0;
+			left: 0;
+			z-index: 1;
+			background-color: azure;
+		}
+		.box02 { 
+			top: 10px;
+			left: 10px;
+			background-color: lawngreen;
+			z-index: 20;
+		}
+		.box03 { 
+			top: 20px;
+			left: 20px;
+			background-color: darkgreen;
+			z-index: 0;
+		}
+		.box04 { 
+			top: 30px;
+			left: 30px;
+			background-color: navajowhite;
+			z-index: 0;
+		}
+		.top-btn {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+		}
+		.top-btn a {
+			padding: 10px;
+			color: aliceblue;
+			font-size: 20px;
+			text-transform: uppercase;
+			text-decoration: none;
+			background-color: palevioletred;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">Hearder</header>
+		<div class="contents">
+			<section id="section">Section</section>
+			<aside id="aside">Aside</aside>
+		</div>
+		<footer id="footer">Footer</footer>
+	</div>
+	<div class="box-wrap">
+		<div class="box box01">box 1</div>
+		<div class="box box02">box 2</div>
+		<div class="box box03">box 3</div>
+		<div class="box box04">box 4</div>
+	</div>
+	<div class="top-btn">
+		<a href=#wrapper>top</a>
+	</div>
+	
+</body>
+</html>

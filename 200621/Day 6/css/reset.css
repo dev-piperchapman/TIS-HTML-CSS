@@ -1,0 +1,32 @@
+@charset utf-8;
+
+/* 웹폰트 CSS */
+@font-face{font-family:'Nanum Gothic'; src:url(../webfont/NanumGothic.eot)}
+@font-face{font-family:'Nanum Gothic'; src:url(../webfont/NanumGothic.woff)}
+
+/* CSS 초기화 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, strong, b, dl, dt, dd, ol, ul, li, article, aside, footer, header, menu, nav, section { margin:0; padding:0; border:0; font-size:100%;
+vertical-align:baseline; background:transparent; }
+
+body {
+	font-family:NanumGothic,나눔고딕, 'Nanum Gothic', '나눔고딕', '맑은고딕's,HelveticaNeue,Sans-serif,Helvetica;
+	background:url(../images/s_images/body_bg.png); line-height:1;
+}
+
+nav ul, li { list-style: none; }
+a { margin:0; padding:0; text-decoration:none;
+font-size:100%;
+vertical-align:baseline; background:transparent; }
+
+img { vertical-align:top; }
+
+div, section { box-sizing: border-box; }
+
+
+
+
+
+
+
+
+

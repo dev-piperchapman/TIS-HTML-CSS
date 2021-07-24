@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* 구글 웹폰트 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* CSS 초기화 */
+* {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+blockquote, pre, abbr, address, code, del, em, img, ins, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tr, th, td, caption, tbody, tfoot, thead, article, aside, details, figcation, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; }
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	display: inline-block;
+	color: #3f51b5;
+	text-decoration: none;
+}
+
+img { vertical-align: top; }
+
+
+/* 공통부분 */
+
+.clear::after, .container::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.blind {
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999em;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+

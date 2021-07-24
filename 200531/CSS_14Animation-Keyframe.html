@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation - Keyframe</title>
+	<style>
+		.box {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 160px;
+			height: 160px;
+			margin: 80px;
+			color: #fff;
+			font-size: 40px;
+			border-radius: 50%;
+			line-height: 160px;
+			text-align: center;
+			background-color: cadetblue;
+			box-shadow: 5px 5px 12px rgba(0, 0, 0, .2);
+			
+			
+			animation-name: falling-ball;
+			animation-duration: 1s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease;
+		}
+		
+		@keyframes falling-ball {
+			from {
+			}
+			to {
+				top: 500px;
+				transform: rotate( 720deg );
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">BALL</div>
+</body>
+</html>

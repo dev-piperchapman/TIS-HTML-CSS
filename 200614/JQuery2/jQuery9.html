@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#test {
+			position: absolute;
+			top: 40%;
+			left: 40%;
+			width: 10px;
+			height: 10px;
+			padding: 20px;
+			color: #fff;
+			font-size: 16px;
+			border: 5px solid orange;
+			background-color: blueviolet;
+			box-sizing: border-box;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var box = $("#test");
+			
+			$("#left").click(function(){
+				box.animate({ "left": "-=50px" }, "fast");
+			});
+			$("#right").click(function(){
+				box.animate({ "left": "+=50px" }, "fast");
+			});
+			$("#up").click(function(){
+				box.animate({ "top": "-=50px" }, "fast");
+			});
+			$("#down").click(function(){
+				box.animate({ "top": "+=50px" }, "fast");
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<button type="button" id="left">◀</button>
+	<button type="button" id="right">▶</button>
+	<button type="button" id="up">▲</button>
+	<button type="button" id="down">▼</button>
+	<div id="test">box</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			// 버튼 1을 클릭하면 #test에 문구 출력
+			$("#btn1").click(function(){
+				alert("text : " + $("#test").text());
+			});
+			$("#btn2").click(function(){
+				alert($("p").html());
+			});
+		});
+	</script>
+	<p>Hello!</p>
+	<div id="test">JQuery letter print</div>
+	<button id="btn1" type="button">SHOW TEXT!</button>
+	<button id="btn2" type="button">SHOW HTML!</button>
+</body>
+</html>

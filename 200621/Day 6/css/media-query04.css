@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: blueviolet;
+	letter-spacing: -0.05em;
+	line-height: 1;
+}
+
+p {
+	line-height: 1.5;
+}
+
+h1, h2, h4, p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	display: inline-block;
+	color: blueviolet;
+	text-decoration: none;
+}
+
+img { vertical-align: top; }
+
+.clear::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* PC 1200px */
+.wrapper {
+	min-width: 320px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+header {
+	padding: 10px;
+}
+
+h1 {
+	color: blueviolet;
+	text-align: center;
+}
+
+.contents {
+	border-bottom: 1px solid blueviolet;
+}
+
+.nav {
+	float: left;
+	width: 33.33%;
+}
+
+.nav li {
+	margin: 5px;
+	padding: 10px;
+	font-weight: bold;
+	background-color: palegreen;
+}
+
+h4 {
+	font-size: 2em;
+}
+
+.gallery ul {
+	text-align: center;
+}
+
+.gallery li {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+}
+.gallery li img {
+	width: 100%;
+}
+
+.about {
+	float: right;
+	width: 66.66%;
+	padding: 10px;
+}
+
+
+
+
+/* Tablet 768px */
+@media screen and ( max-width: 786px ) {
+	.contents .nav,	.contents .about {
+		width: 100%;
+		float: none;
+	}
+	.gallery li {
+		width: 50%;
+	}
+}
+
+@media screen and ( max-width: 440px ) {
+	.gallery li {
+		float: none;
+		width: 100%;
+	}
+}
+
+/* Mobile 320px */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

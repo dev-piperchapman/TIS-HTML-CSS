@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Hover / Font Awesome</title>
+	<link rel="stylesheet" href="css/all.min.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			margin: 0;
+			letter-spacing: -0.05em;
+			line-height: 1.5;
+		}
+		
+		.item-wrapper {
+			width: 400px;
+			margin: 0 auto;
+		}
+		
+		.item-image-area {
+			position: relative;
+			overflow: hidden;
+			width: 400px;
+			height: 400px;
+			background: url(images/1.jpg) no-repeat center / 100%;
+			transition: all .4s ease;
+		}
+		
+		.item-image-area > * {
+			position: absolute;
+			transition: all .4s ease;
+		}
+		
+		.item-desc-area {
+			margin-top: 20px;
+			color: #333;
+			font-size: 14px;
+			text-align: center;
+		}
+		
+		
+		.item-desc-area .title {
+			font-size: 20px;;
+		}
+		
+		.sale-copy {
+			width: 60px;
+			height: 50px;
+			right: -60px;
+			top: 0;
+			color: #fff;
+			line-height: 50px;
+			text-align: center;
+			background-color: deeppink;
+		}
+		
+		.icons {
+			width: 100%;
+			left: 50%;
+			bottom: -60px;
+			font-size: 0;
+			text-align: center;
+			transform: translateX( -50% );
+		}
+		
+		.icons a {
+			display: inline-block;
+			height: 40px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-right: 10px;
+			color: #333;
+			font-size: 20px;
+			line-height: 40px;
+			text-align: center;
+			border: 1px solid #333;
+			border-radius: 20px;
+		}
+		
+		.icons a:hover {
+			background-color: rgba(0, 0, 0, .4);
+		}
+		
+		.icons a:last-child {
+			margin-right: 0;
+		}
+		
+		.item-image-area:hover {
+			background-size: 110%;		
+		}
+		
+		.item-image-area:hover .icons {
+			bottom: 20px
+		}
+		
+		.item-image-area:hover .sale-copy {
+			right: 0;
+		}
+		
+		
+		
+
+	</style>
+</head>
+<body>
+	<div class="item-wrapper">
+		<div class="item-image-area">
+			<div class="icons">
+				<a href="" class="icon-1">
+					<i class="far fa-thumbs-up"></i>
+				</a>
+				<a href="" class="icon-2">
+					<i class="far fa-heart"></i>
+				</a>
+				<a href="" class="icon-3">
+					<i class="fas fa-shopping-cart"></i>
+				</a>
+				<a href="" class="icon-4">
+					<i class="fas fa-plus"></i>
+				</a>
+			</div>
+			<div class="sale-copy">15%</div>
+		</div>
+		<div class="item-desc-area">
+			<p class="title">상품명 | TEST</p>
+			<p class="price">가격 | $10,00</p>
+		</div>
+	</div>
+</body>
+</html>

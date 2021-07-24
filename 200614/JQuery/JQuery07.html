@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery - CSS Control</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		.important {
+			font-size: 50px;
+			font-weight: bold;
+		}
+		
+		.blue {
+			color: forestgreen;	
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>안녕하세요.</h1>
+	<h2>제이쿼리입니다.</h2>
+	<p>문단태그입니다.</p>
+	<p>문단태그2입니다.</p>
+	<div class="">중요한 문단입니다.</div>
+	<button type="button" id="btn1">CLICK</button>
+	
+	<script>
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("h1, h2, p").addClass("blue");
+				$("div").addClass("important blue");
+			});
+		});
+	</script>
+</body>
+</html>

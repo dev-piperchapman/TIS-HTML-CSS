@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		#text1 {
+			padding: 50px;
+			border: 3px solid navy;
+			background-color: burlywood;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#text1").remove();
+			});
+			$("#btn2").click(function(){
+				$("#text1").empty();
+			});
+		});
+	</script>
+	<p id="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deserunt aliquam sapiente? Rerum suscipit ad quia at quidem pariatur voluptate, asperiores natus! Voluptates, autem, ullam! Repellat inventore fuga at natus.</p>
+	
+	<button id="btn1" type="button">remove</button>
+	<button id="btn2" type="button">empty</button>
+	
+</body>
+</html>

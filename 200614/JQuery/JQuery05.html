@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#text1").text("제이쿼리 입력 텍스트");
+			});
+			$("#btn2").click(function(){
+				$("#text2").html("태그 안에 텍스트 입력");
+			});
+			$("#btn3").click(function(){
+				$("#text3").val("안녕하세요?");
+			});
+		});
+	</script>
+	<p id="text1"></p>
+	<p id="text2"></p>
+	<input type="text" id="text3">
+	<button id="btn1" type="button">text</button>
+	<button id="btn2" type="button">HTML</button>
+	<button id="btn3" type="button">Value</button>
+</body>
+</html>

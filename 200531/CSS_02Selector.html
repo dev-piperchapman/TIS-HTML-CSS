@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body * { border: 1px solid #333; }
+				
+		.wrapper { background-color: bisque }
+		
+		.wrapper::before {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		
+		.wrapper::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		
+		.wrapper div {
+			float: left;
+			width: 100px;
+			height: 200px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box01">누가 말했다더라</div>
+		<div class="box02">box02</div>
+		<div class="box03">box03</div>
+	</div>
+</body>
+</html>

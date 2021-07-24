@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>강원천문대</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div class="w1200-wrapper">
+		<header class="clear">
+			<h1 class="header-logo">
+				<img src="images/logo.gif" alt="강원천문대">
+			</h1>
+			<nav class="header-nav">
+				<ul class="header-1depth">
+					<li>
+						<a href="">강원천문대</a>
+						<ul class="header-2depth">
+							<li><a href="">천문대소개</a></li>
+							<li><a href="">인사말</a></li>
+							<li><a href="">오시는길</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">이용안내</a>
+						<ul class="header-2depth">
+							<li><a href="">프로그램</a></li>
+							<li><a href="">관람시간표</a></li>
+							<li><a href="">이달의 별자리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">천문대예약</a>
+						<ul class="header-2depth">
+							<li><a href="">예약하기</a></li>
+							<li><a href="">예약확인</a></li>
+							<li><a href="">예약취소</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">커뮤니티</a>
+						<ul class="header-2depth">
+							<li><a href="">공지사항</a></li>
+							<li><a href="">방문후기</a></li>
+							<li><a href="">자유게시판</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="main-slider">
+				<ul class=main-slider-wrapper>
+					<li>
+						<img src="images/slider1.jpg" alt="슬라이드 이미지 1">
+					</li>
+					<li>
+						<img src="images/slider2.jpg" alt="슬라이드 이미지 2">
+					</li>
+					<li>
+						<img src="images/slider3.jpg" alt="슬라이드 이미지 3">
+					</li>
+				</ul>
+			</section>
+			<section class="main-contents clear">
+				<section class="tab-board-area">
+					<div class="tab-title">
+						<a href="" class="title-notice on">공지사항</a>
+						<a href="" class="title-gallery">갤러리</a>
+					</div>
+					<div class="board-wrap">
+						<div class="board-item board-noitce">
+							<a href="">국토정중앙천문대 2019년 야영장 운영개시 안내</a>
+							<a href="">국토정중앙천문대 3월 프로그램 안내</a>
+							<a href="">국토정중앙천문대 11월 야영장 운영안내 및 겨울철 폐장안내</a>
+							<a href="">야간관측프로그램 예약 및 접수 안내</a>
+							<a href="">극토정중앙천문대 야영장 시설사용료 인상안내</a>
+						</div>
+						<div class="board-item board-gallery">
+							<a href="">
+								<img src="images/thumb1.jpg" alt="">
+							</a>
+							<a href="">
+								<img src="images/thumb2.jpg" alt="">
+							</a>
+							<a href="">
+								<img src="images/thumb3.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="banner">
+					<h3>배너</h3>
+					<div class="img-wrap">
+						<img src="images/banner.jpg" alt="">
+					</div>
+				</section>
+				<section class="quick">
+					<h3>바로가기</h3>
+					<a class="img-wrap" href="">
+						<img src="images/qlink.jpg" alt="">
+					</a>
+				</section>
+			</section>
+		</main>
+		<footer class="clear">
+			<section class="footer-logo">
+				<img src="images/btm_logo.gif" alt="강원천문대">
+			</section>
+			<section class="footer-main">
+				<ul class="footer-menu">
+					<li><a href="">강원천문대소개</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">이메일무단수집거부</a></li>
+					<li><a href="">찾아오시는 길</a></li>
+					<li><a href="">예약하기</a></li>
+				</ul>
+				<p class="copyright">
+					Copyright <strong>강원천문대</strong>. All rights reserved.
+				</p>
+			</section>
+		</footer>
+		<div class="pop-up-dim">
+			<section class="pop-up">
+				<seciton class="pop-up-top">
+					<p class="pop-up-title">POPUP TITLE</p>
+				</seciton>
+				<button type="button" class="pop-up-btn-close">닫기</button>
+			</section>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			// 1depth에 마우스 호버하면 2depth가 나타난다.
+			$(".header-1depth > li").mouseover(function(){
+				//.$(".header-2depth").slideDown();
+				$(this).children(".header-2depth").stop().slideDown();
+			});
+
+			$(".header-1depth > li").mouseleave(function(){
+				//.$(".header-2depth").slideDown();
+				$(this).children(".header-2depth").stop().slideUp();
+			});
+
+		});
+
+		// 팝업
+		// 배너 이미지를 클릭하면 팝업창이 나타난다.
+		$(".banner img").click(function(){
+			//팝업창이 나타난다.
+			$(".pop-up-dim").fadeIn();
+		});
+		
+		$(".pop-up-btn-close").click(function(){
+			//팝업창이 나타난다.
+			$(".pop-up-dim").fadeOut();
+		});
+	</script>
+	
+
+</body>
+</html>

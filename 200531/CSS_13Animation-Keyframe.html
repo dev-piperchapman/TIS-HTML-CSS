@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation - Keyframe</title>
+	<style>
+		.box {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+			height: 100px;
+			margin: 100px;
+			color: #fff;
+			font-size: 30px;
+			line-height: 100px;
+			text-align: center;
+			background-color: cadetblue;
+			box-shadow: 5px 5px 12px rgba(0, 0, 0, .2);
+			
+			animation-name: move-xy;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease;
+		}
+		
+		@keyframes move-xy {
+			0% { 
+				left: 0;
+				top: 0;
+			}
+			
+			25% { 
+				left: 500px;
+				top: 0;
+				background-color: lemonchiffon;
+			}
+			
+			50% { 
+				left: 500px;
+				top: 500px;
+				background-color: palevioletred;
+			}
+			
+			75% { 
+				left: 0;
+				top: 500px;
+				background-color: mediumblue;
+			}
+			
+			100% {
+				left: 0;
+				top: 0;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">BOX</div>
+</body>
+</html>

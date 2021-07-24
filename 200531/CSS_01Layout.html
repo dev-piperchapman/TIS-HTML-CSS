@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Layout</title>
+	<style>
+		body {
+			margin: 0;
+			line-height: 1.5;
+			letter-spacing: -0.05em
+		}
+		
+		body * { border: 3px solid #333; }
+		
+		/*	가상클래스는 inline 요소	*/
+		.clear::after {
+			content: "";
+			display: block;
+			clear: both;
+			
+		}
+		
+		.wrapper {
+			width: 500px;
+			margin: 0 auto;
+		}
+		
+		header { height: 50px; }
+		
+		footer {
+			height: 50px;
+		}
+		
+		.main-contents-wrapper {
+			position: relative;
+			/* overflow: hidden; */
+			background-color: aqua;
+		}
+		
+		.main-contents-wrapper aside {
+			float: left;
+			width: 180px;
+			height: 200px;
+		}
+		
+		.main-contents-wrapper section {
+			float: right;
+			width: 300px;
+			height: 200px;
+		}
+		
+		.left-banner {
+			position: absolute;
+			top: 0;
+			right: -70px;
+			width: 50px;
+			height: 100px;
+			background-color: bisque;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>HEADER</header>
+		<div class="main-contents-wrapper clear">
+			<!-- MAIN CONTENTS -->
+			<aside>ASIDE</aside>
+			<section>SECTION</section>
+			<div class="left-banner">BANNER</div>
+			<!-- clear: both;	-->
+		</div>
+		<footer>FOOTER</footer>
+	</div>
+</body>
+</html>
